@@ -1,10 +1,10 @@
 jenkins:
     systemMessage: "Welcome to the Chocolatine-Powered Marvin Jenkins Instance.\n\n"
     globalNodeProperties:
-      - envVars:
-          env:
-          - key: "USER_CHOCOLATEEN_PASSWORD"
-            value: "adison"
+        - envVars:
+              env:
+                  - key: "USER_CHOCOLATEEN_PASSWORD"
+                    value: "adison"
     securityRealm:
         local:
             allowsSignup: false
@@ -22,28 +22,28 @@ jenkins:
                 - id: "nasso"
                   name: "Nassim"
                   password: ${USER_NASSO_PASSWORD}
-      authorizationStrategy:
+    authorizationStrategy:
         roleBased:
             roles:
                 global:
                     - name: "admin"
-                        description: "Marvin master"
-                        permissions:
+                      description: "Marvin master"
+                      permissions:
                           - "Overall/Administer"
-                        assignments:
+                      assignments:
                           - "chocolateen"
                     - name: "ape"
-                        description: "Pedagogical team member"
-                        permissions:
+                      description: "Pedagogical team member"
+                      permissions:
                           - "Job/Build"
                           - "Job/Read"
                           - "Job/Workspace"
                           - "Overall/Read"
-                        assignments:
+                      assignments:
                           - "i_dont_know"
                     - name: "gorilla"
-                        description: "Group Obsessively Researching Innovation Linked to Learning and Accomplishment"
-                        permissions:
+                      description: "Group Obsessively Researching Innovation Linked to Learning and Accomplishment"
+                      permissions:
                           - "Overall/Read"
                           - "Job/Read"
                           - "Job/Build"
@@ -53,13 +53,13 @@ jenkins:
                           - "Job/Create"
                           - "Job/Move"
                           - "Job/Cancel"
-                        assignments:
+                      assignments:
                           - "vaugie_g"
                     - name: "assist"
                       description: "Assistant"
                       permissions:
-                        - "Overall/Read"
-                        - "Job/Read"
-                        - "Job/Workspace"
+                          - "Overall/Read"
+                          - "Job/Read"
+                          - "Job/Workspace"
                       assignments:
-                        - "nasso"
+                          - "nasso"
